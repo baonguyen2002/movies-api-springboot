@@ -6,9 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("/popular")
+@CrossOrigin(origins = "*")
 public class PopularMovieListController {
     @Autowired
     private PopularMovieListService popularMovieListService;

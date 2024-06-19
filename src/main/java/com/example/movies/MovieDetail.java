@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.List;
@@ -29,4 +30,6 @@ public class MovieDetail {
     private String tagline;
     private String overview;
     private String poster_path;
+    @DocumentReference
+    private List<Comment> commentId;
 }

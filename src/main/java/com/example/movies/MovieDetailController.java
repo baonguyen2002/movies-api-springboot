@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("/movie")
+@CrossOrigin(origins = "*")
 public class MovieDetailController {
     @Autowired
     private MovieDetailService movieDetailService;
