@@ -31,4 +31,10 @@ public class CommentController {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
+
+	@GetMapping("/{username}/{tmdbId}")
+	public ResponseEntity<List<Comment>> getCommentsByUsernameAndTmdbId(@PathVariable String username, @PathVariable int tmdbId) {
+		List<Comment> comments = commentService.getCommentsByUsernameAndTmdbId(username, tmdbId);
+		return new ResponseEntity<>(comments, HttpStatus.OK);
+	}
 }
